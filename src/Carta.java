@@ -1,3 +1,5 @@
 public class Carta extends Entidad {
-    public String tipo;
+    public Entrenador entrenador;
+    public String elemento;
+    public String status;
 }
