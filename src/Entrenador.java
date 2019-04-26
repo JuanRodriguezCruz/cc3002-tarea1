@@ -1,12 +1,24 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+ /**
+ * Entidad Entrenador el cual posee una mano de cartas y en su mesa
+  * posee una banca con Pokemon y un Pokemon en el campo de batalla
+ */
 public class Entrenador extends Entidad{
     protected ArrayList<Carta> hand;
     protected ArrayList<Pokemon> banca;
     public  Pokemon pokemonActivo;
+
+     /**
+      * Representa la seleccion de ataques por parte del Entrenador
+      * para que su Pokemon activo lo ejecute, teniendo en cuenta que el Pokemon posee entre 1 y 4 ataques
+      * Para que se lleve acabo el ataque el Entrenador debe escribir un ataque conocido por el Pokemon activo
+      * @param enemy es el Pokemon enemigo al cual ira dirigido el ataque
+      */
     public void selectAtk(Pokemon enemy) {
         int nAtk=1;
+        /* hacerlo sin scanner, con indice*/
         Scanner atk = new Scanner(System.in);
         System.out.println("Seleccionar Ataque:");
         System.out.print(pokemonActivo.ataque1.name);
