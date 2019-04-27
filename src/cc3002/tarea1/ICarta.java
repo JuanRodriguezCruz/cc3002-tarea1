@@ -1,5 +1,5 @@
 package cc3002.tarea1;
 
 public interface ICarta {
-    void serJugada();
+    void serJugada(Entrenador entrenador);
 }

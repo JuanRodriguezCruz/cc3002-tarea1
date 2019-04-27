@@ -4,14 +4,19 @@ import java.util.ArrayList;
 
 
 public class Entrenador {
-     protected ArrayList<Carta> hand;
-     protected ArrayList<Pokemon> banca;
+     public ArrayList<Carta> hand;
+     public ArrayList<Pokemon> banca;
      public ArrayList<Carta> cementerio;
      public Pokemon pokemonActivo;
+     public Entrenador(){
+         hand = new ArrayList<>();
+         banca=new ArrayList<>();
+         cementerio = new ArrayList<>();
+     }
 
      public void jugarCarta(int indexOfHand){
          Carta card=this.hand.get(indexOfHand);
-         card.serJugada();
+         card.serJugada(this);
      }
 
      /**
@@ -32,12 +37,12 @@ public class Entrenador {
      }
 
      public void jugarPkmn(Pokemon pkmn) {
-         if (this.banca.size()==0){
+         if (this.banca.isEmpty()){
              this.hand.remove(pkmn);
              this.pokemonActivo= pkmn;
          }
 
-         else if (this.banca.size()<5){
+         else if (!this.banca.isEmpty()){
             this.hand.remove(pkmn);
             this.banca.add(pkmn);
 

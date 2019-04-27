@@ -7,8 +7,8 @@ package cc3002.tarea1;
  * @author Juan_Rodriguez
  */
 abstract class Carta implements ICarta  {
-    protected Entrenador entrenador;
+    public Entrenador entrenador;
 
-    protected String elemento;
+
 
 }

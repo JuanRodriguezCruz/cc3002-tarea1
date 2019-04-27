@@ -9,4 +9,15 @@ public class Ataque {
     public int damage;
     public int cost;
     public String description;
+
+    /**
+     * Constructor de Ataque
+     * con todos los valores en 0 o "".
+     */
+    public Ataque(){
+        this.name= "";
+        this.damage=0;
+        this.cost=0;
+        this.description="";
+    }
 }
